@@ -1,0 +1,345 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+body{
+    color: white;
+    background: rgb(0,0,0);
+    background: linear-gradient(270deg, rgba(0,0,0,1) 0%, rgba(54,54,54,1) 100%);
+    font-family: Inter;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    position: fixed;
+    z-index: 100;
+    background: rgb(0,0,0);
+    background: linear-gradient(270deg, rgba(0,0,0,1) 0%, rgba(54,54,54,1) 100%);
+    justify-content: space-between;
+    margin: auto;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right:0;
+    height: 3em;
+    padding-left: 3em;
+    padding-right: 3em;
+}
+
+/* Header Border */
+header::after {
+    content: '';
+    position: absolute;
+    bottom:0;
+    left: 50%;
+    width: 95%;
+    transform: translateX(-50%);
+    height: 0.5px;
+    background-color: white; 
+    margin: 0 auto;
+    margin-top: 1em;
+}
+
+header.scrolled{
+    background-color: black;
+}
+
+#header-name{
+    margin-left: 1em;
+    font-size: 1em;
+    font-weight: 300;
+
+}
+
+nav ul{
+    display: flex;
+}
+
+nav li{
+    display: inline-block;
+    margin-right: 1em;
+}
+
+nav li a{
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 300;
+
+}
+
+.banner{
+    min-height: 100vh;
+}
+
+.img-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 4em;
+    align-items: end;
+    height: 18rem;
+}
+
+.img-container img{
+    max-width: 100%;
+    height: 10em;
+
+}
+
+.name-container{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.name-container h1{
+    font-size: 3em;
+}
+
+.email-container{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 0.5rem;
+}
+
+.email-container h1{
+    font-size: 1em;
+    font-weight: 100;
+}
+
+.role-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:1rem;
+}
+
+.role-container h2{
+    font-size: 1.25em;
+    font-weight: 200;
+}
+
+.icon-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3em;
+    margin-top: 1em;
+}
+
+#github{
+    width: 3em;
+    margin-right: 0.5em;
+}
+
+#github:hover{
+    width: 3.5em;
+    height: 3.5em;
+}
+
+#linkedin{
+    width: 2.75em;
+    margin-left: 0.5em;
+}
+
+#linkedin:hover{
+    width: 3.25em;
+    height: 3.25em;
+}
+
+.greeting{
+    background-color: white;
+    max-height: 100em;
+    min-height: 20em;
+}
+
+.greeting p{
+    color: #363636;
+}
+
+#hey{
+    font-size: 1.55em;
+    font-weight: 500;
+    margin-left: 3.5em;
+    margin-bottom: 1em;
+    padding-top: 3em;
+}
+
+#greeting-txt{
+    font-size: 1.55em;
+    font-weight: 300;
+    margin-left: 3.5em;
+}
+
+#pj-title{
+    font-size: 2.5em;
+    margin-top:0.75em;
+    margin-bottom:0.5em;
+    text-align: center;
+    padding-bottom: 0.25em;
+}
+
+.project-containers{
+    margin-top: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    align-items: center;
+    background-color: white;
+    width: 90%;
+    margin: auto;
+    height: 100%;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+}
+
+.pj-container{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding-left: 0.5em;
+    margin-top: 0.5em;
+    width: 22em;
+    color: #363636;
+    border: 3px solid #363636;
+}
+
+.cv-section{
+    margin-top: 2em;
+    margin-bottom: 2em;
+    text-align: center;
+}
+.cv-section a{
+    color: white;
+    text-decoration: none;
+}
+
+.cv-section button{
+    box-shadow: 3px 3px;
+    height: 3.5em;
+    width: 25%;
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(26,26,26,1) 40%, rgba(54,54,54,1) 100%);
+    color: white;
+}
+
+.cv-section button:active{
+    margin-top: 0.25em;
+    margin-left: 0.75em;
+    box-shadow: none;
+}
+
+.cv-section button:hover{
+    width: 26%;
+    height: 3.7em ;
+}
+
+#projects:before{
+    display: block; 
+    content: " "; 
+    margin-top: -45px; 
+    height: 45px; 
+    visibility: hidden; 
+    pointer-events: none;
+}
+
+@media only screen and (max-width:525px) {
+    .name-container h1{
+        font-size: 2em;
+    }
+    
+    #header-name{
+        visibility: hidden;
+        position:absolute;
+    }
+
+    header{
+        display: flex;
+        align-items: center;
+        position: fixed;
+        z-index: 100;
+        background: rgb(0,0,0);
+        background: linear-gradient(270deg, rgba(0,0,0,1) 0%, rgba(54,54,54,1) 100%);
+        justify-content: center;
+        margin: auto;
+        width: 100%;
+        top: 0;
+        left: 0;
+        right:0;
+        height: 3em;
+    }
+}
+
+@media only screen and (max-width:445px) {
+    #hey{
+        font-size: 1.55em;
+        font-weight: 500;
+        margin-left: 0.5em;
+        margin-bottom: 1em;
+        padding-top: 2em;
+    }
+    
+    #greeting-txt{
+        font-size: 1.55em;
+        font-weight: 300;
+        margin-left: 0.5em;
+    }
+
+    .project-containers{
+        margin-top: 3rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content:space-evenly;
+        align-items: center;
+        background-color: transparent;
+        width: 90%;
+        margin: auto;
+        height: 100%;
+        padding-bottom: 2rem;
+        padding-top: 2rem;
+    }
+
+    .pj-container{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        padding-left: 0.5em;
+        margin-top: 0.5em;
+        width: 22em;
+        color: #363636;
+        background-color: white;
+        border: 3px solid #363636;
+    }
+}
+
+@media only screen and (max-width:350px) {
+    .name-container h1{
+        font-size: 1.5em;
+    }
+}
+
+@media only screen and (min-width:446px) and (max-width:700px) {
+    #hey{
+        font-size: 1.55em;
+        font-weight: 500;
+        margin-left: 1.5em;
+        margin-bottom: 1em;
+        padding-top: 2em;
+    }
+    
+    #greeting-txt{
+        font-size: 1.55em;
+        font-weight: 300;
+        margin-left: 1.5em;
+    }
+
+}
