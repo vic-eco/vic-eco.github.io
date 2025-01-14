@@ -10,8 +10,6 @@ const projects = document.getElementsByClassName("project-containers")[0];
 const button = document.querySelector(".cv-section button");
 const buttonText = document.querySelector(".cv-section a");
 
-
-
 let lightMode = false;
 
 function lightHandler(){
