@@ -38,12 +38,21 @@ function lightHandler(){
             pis[i].style.color = "white";
         }   
 
-        projects.style.backgroundColor = "rgb(35, 35, 35)"
         let pjContainers = projects.getElementsByClassName("pj-container");
-        for (let i = 0; i < pjContainers.length; i++) {
-            pjContainers[i].style.color = "white";
-            pjContainers[i].style.border = "3px solid white";
-        }   
+
+        if (window.innerWidth <= 445) {
+            for (let i = 0; i < pjContainers.length; i++) {
+                pjContainers[i].style.backgroundColor = "rgb(35, 35, 35)";
+                pjContainers[i].style.color = "white";
+                pjContainers[i].style.border = "3px solid white";
+            }
+        } else{
+            projects.style.backgroundColor = "rgb(35, 35, 35)"
+            for (let i = 0; i < pjContainers.length; i++) {
+                pjContainers[i].style.color = "white";
+                pjContainers[i].style.border = "3px solid white";
+            }
+        }
 
         button.style.background = "linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(197,197,197,1) 60%, rgba(85,85,85,1) 100%)"
         button.style.color = "black";
@@ -75,9 +84,10 @@ function lightHandler(){
             pis[i].style.removeProperty("color");
         }
 
-        projects.style.backgroundColor = "white"
+        projects.style.removeProperty("background-color");
         let pjContainers = projects.getElementsByClassName("pj-container");
         for (let i = 0; i < pjContainers.length; i++) {
+            pjContainers[i].style.removeProperty("background-color");
             pjContainers[i].style.removeProperty("color");
             pjContainers[i].style.removeProperty("border");
         }   
@@ -90,4 +100,25 @@ function lightHandler(){
     lightMode = !lightMode;
 }
 
+
+function handleResize() {
+    if (window.innerWidth <= 445) {
+        let pjContainers = document.querySelectorAll('.pj-container');
+        pjContainers.forEach(pjContainer => {
+            // Remove the background color if the screen size is small
+            pjContainer.style.removeProperty('background-color');
+        });
+    } else {
+        let pjContainers = document.querySelectorAll('.pj-container');
+        pjContainers.forEach(pjContainer => {
+            // Set the background color to white if it's not set
+            if (!pjContainer.style.backgroundColor) {
+                pjContainer.style.backgroundColor = 'white';
+            }
+        });
+    }
+}
+
 mode.onclick = lightHandler;
+//window.addEventListener('resize', handleResize);
+//handleResize();
