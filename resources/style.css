@@ -298,6 +298,17 @@ nav li a{
     }
 }
 
+@media only screen and (max-width:449px) {
+    .cv-section button{
+        box-shadow: 3px 3px;
+        height: 5.5em;
+        width: 50%;
+        background: rgb(0,0,0);
+        background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(26,26,26,1) 40%, rgba(54,54,54,1) 100%);
+        color: white;
+    }
+}
+
 @media only screen and (max-width:445px) {
     #hey{
         font-size: 1.55em;
@@ -338,11 +349,48 @@ nav li a{
         background-color: white;
         border: 3px solid #363636;
     }
+
+    .light-mode .project-containers{
+        margin-top: 3rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content:space-evenly;
+        align-items: center;
+        background-color: transparent;
+        width: 90%;
+        margin: auto;
+        height: 100%;
+        padding-bottom: 2rem;
+        padding-top: 2rem;
+    }
+
+    .light-mode .pj-container{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        padding-left: 0.5em;
+        margin-top: 0.5em;
+        width: 22em;
+        color: white;
+        background-color: rgb(35, 35, 35);
+        border: 3px solid white;
+    }
 }
 
 @media only screen and (max-width:350px) {
     .name-container h1{
         font-size: 1.5em;
+    }
+}
+
+@media only screen and (max-width:238px) {
+    .cv-section button{
+        box-shadow: 3px 3px;
+        height: 7em;
+        width: 50%;
+        background: rgb(0,0,0);
+        background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(26,26,26,1) 40%, rgba(54,54,54,1) 100%);
+        color: white;
     }
 }
 
