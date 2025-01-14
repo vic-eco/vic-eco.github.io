@@ -299,17 +299,6 @@ nav li a{
 }
 
 @media only screen and (max-width:449px) {
-    .cv-section button{
-        box-shadow: 3px 3px;
-        height: 5.5em;
-        width: 50%;
-        background: rgb(0,0,0);
-        background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(26,26,26,1) 40%, rgba(54,54,54,1) 100%);
-        color: white;
-    }
-}
-
-@media only screen and (max-width:445px) {
     #hey{
         font-size: 1.55em;
         font-weight: 500;
@@ -375,6 +364,21 @@ nav li a{
         background-color: rgb(35, 35, 35);
         border: 3px solid white;
     }
+
+    .cv-section button{
+        box-shadow: 3px 3px;
+        height: 5.5em;
+        width: 50%;
+        background: rgb(0,0,0);
+        background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(26,26,26,1) 40%, rgba(54,54,54,1) 100%);
+        color: white;
+        transition: width 0.3s, height 0.3s;
+    }
+
+    .cv-section button:hover {
+        width: 50%;
+        height: 5.5em;
+    }
 }
 
 @media only screen and (max-width:350px) {
@@ -391,6 +395,11 @@ nav li a{
         background: rgb(0,0,0);
         background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(26,26,26,1) 40%, rgba(54,54,54,1) 100%);
         color: white;
+    }
+
+    .cv-section button:hover {
+        height: 7em;
+        width: 50%;
     }
 }
 
