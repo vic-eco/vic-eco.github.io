@@ -40,7 +40,9 @@ function lightHandler(){
             pis[i].style.color = "white";
         }   
 
+        if(window.innerWidth > 445){
         projects.style.backgroundColor = "rgb(35, 35, 35)";
+        }
         let pjContainers = projects.getElementsByClassName("pj-container");
         for (let i = 0; i < pjContainers.length; i++) {
             pjContainers[i].style.color = "white";
